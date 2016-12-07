@@ -65,12 +65,12 @@ The second deletes entries that were already in `device_ip` before an ignoreaddr
 
 Apply the SQL like this:
 
-   psql -U netdisco < ignoreaddress.sql
+    psql -U netdisco < ignoreaddress.sql
    
 To add entries:
 
-   psql -U netdisco
-   insert into ignoreaddress (uniqueaddress, ignoreaddress) values ('10.2.1.255', '1.1.1.1'); 
+    psql -U netdisco
+    insert into ignoreaddress (uniqueaddress, ignoreaddress) values ('10.2.1.255', '1.1.1.1'); 
    
 Should work for both Netdisco 1.3 and 2.   
 
