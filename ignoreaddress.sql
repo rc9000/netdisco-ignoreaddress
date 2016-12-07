@@ -1,3 +1,5 @@
+begin;
+
 CREATE TABLE ignoreaddress
 (
   uniqueaddress inet NOT NULL,
@@ -41,3 +43,5 @@ $BODY$
 
 CREATE TRIGGER tg_ignoreaddress_prevent_alias BEFORE INSERT ON device_ip
   FOR EACH ROW EXECUTE PROCEDURE ignoreaddress_prevent_alias();
+
+commit;
